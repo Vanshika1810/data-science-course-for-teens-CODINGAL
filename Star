@@ -1,0 +1,29 @@
+import tkinter as tk
+
+# Create window
+window = tk.Tk()
+window.title("Star on Canvas")
+window.geometry("400x400")
+
+# Create canvas
+canvas = tk.Canvas(window, width=300, height=300, bg="white")
+canvas.pack(pady=20)
+
+# Draw star using polygon (x1,y1,x2,y2,...)
+canvas.create_polygon(
+    150, 50,    # Top
+    180, 120,
+    250, 120,
+    195, 165,
+    220, 240,
+    150, 190,
+    80, 240,
+    105, 165,
+    50, 120,
+    120, 120,
+    fill="yellow",
+    outline="black"
+)
+
+# Run window
+window.mainloop()
