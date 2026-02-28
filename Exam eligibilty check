@@ -1,0 +1,25 @@
+from datetime import datetime
+
+# Input date of birth
+dob_input = input("Enter your Date of Birth (DD-MM-YYYY): ")
+
+# Convert string to date
+dob = datetime.strptime(dob_input, "%d-%m-%Y")
+
+# Get today's date
+today = datetime.now()
+
+# Calculate age
+age = today.year - dob.year
+
+# Adjust if birthday not yet occurred this year
+if (today.month, today.day) < (dob.month, dob.day):
+    age -= 1
+
+print("Your Age:", age)
+
+# Eligibility check
+if age >= 18:
+    print("Eligible for Exam")
+else:
+    print("Not Eligible for Exam")
