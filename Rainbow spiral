@@ -1,0 +1,21 @@
+import turtle
+
+# Create screen
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+# Create turtle
+pen = turtle.Turtle()
+pen.speed(0)
+pen.width(2)
+
+# Rainbow colors
+colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+
+# Draw spiral
+for i in range(200):
+    pen.pencolor(colors[i % 7])
+    pen.forward(i * 2)
+    pen.right(59)
+
+turtle.done()
