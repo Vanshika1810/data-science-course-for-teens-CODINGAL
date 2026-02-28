@@ -1,0 +1,9 @@
+name = input("Enter your name: ")
+course = input("Enter your course: ")
+interest = input("Enter your interest: ")
+
+print("\nHello everyone,")
+print("My name is", name + ".")
+print("I am pursuing", course + ".")
+print("I have interest in", interest + ".")
+print("Thank you.")
